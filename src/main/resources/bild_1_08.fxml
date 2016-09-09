@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="14.0" layoutY="236.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="57.0" text="Start" />
+      <Label layoutX="79.0" layoutY="247.0" text="Hallo" />
+      <Button layoutX="449.0" layoutY="21.0" mnemonicParsing="false" text="DE" />
+      <Button layoutX="512.0" layoutY="21.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="40.0" text="RU" />
+      <ImageView fitHeight="17.0" fitWidth="25.0" layoutX="553.0" layoutY="23.0">
+         <image>
+            <Image url="@../../../../../Projekt_Moskau/Bild_Flora/russland_15x23.gif" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="480.0" layoutY="24.0">
+         <image>
+            <Image url="@../../../../../Projekt_Moskau/Bild_Flora/deutschland_15x25.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="202.0" fitWidth="314.0" layoutX="14.0" layoutY="21.0">
+         <image>
+            <Image url="@../../../../bild_w1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
