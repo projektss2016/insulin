@@ -31,11 +31,11 @@ public class adminController {
             //get reference to the button's stage
             stage = (Stage) btnUser.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("DritteWindow.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Berechnen.fxml"));
         }
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 600));
-        stage.setTitle("calc");
+        stage.setTitle("Insulin APP");
         stage.show();
     }
 

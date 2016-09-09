@@ -20,11 +20,11 @@ import java.util.ResourceBundle;
  * Created by nata on 06.09.2016.
  */
 public class MainController implements Initializable {
-
+    static String sprache = "de";
     @FXML
     Button btnStart;
     @FXML
-    Label label1;
+    Label label;
     @FXML
     Button btnDE;
     @FXML
@@ -35,19 +35,33 @@ public class MainController implements Initializable {
     public void onClick(ActionEvent event) throws IOException {
         Stage stage = null;
         Parent root = null;
-        if(event.getSource()== btnStart){
-            //get reference to the button's stage
-            stage = (Stage) btnStart.getScene().getWindow();
+
+//        if(event.getSource()== btnStart){
+//            //get reference to the button's stage
+//            stage = (Stage) btnStart.getScene().getWindow();
+//            //load up OTHER FXML document
+//            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin08.fxml"));
+//        }
+        if (event.getSource()== btnDE) {
+              sprache = "de";
+            stage = (Stage) btnDE.getScene().getWindow();
+            //load up OTHER FXML document
+          root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin08.fxml"));
+        }
+        if (event.getSource()== btnRU) {
+              sprache = "ru";
+            stage = (Stage) btnRU.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin08.fxml"));
         }
+
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 600));
-        stage.setTitle("calc");
+        stage.setTitle("Insulin APP");
         stage.show();
     }
 
     public void initialize(URL location, ResourceBundle resources) {
-//        this.resourceBundle = ResourceBundle.getBundle("bundles.bundle", new Locale("ru"));
+//        this.resourceBundle = ResourceBundle.getBundle("bundles.bundle", new Locale("de"));
     }
 }
