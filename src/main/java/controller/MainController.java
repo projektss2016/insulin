@@ -46,17 +46,17 @@ public class MainController implements Initializable {
               sprache = "de";
             stage = (Stage) btnDE.getScene().getWindow();
             //load up OTHER FXML document
-          root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin08.fxml"));
+          root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         }
         if (event.getSource()== btnRU) {
               sprache = "ru";
             stage = (Stage) btnRU.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin08.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         }
 
         //create a new scene with root and set the stage
-        stage.setScene(new Scene(root, 600, 600));
+        stage.setScene(new Scene(root, 600, 270));
         stage.setTitle("Insulin APP");
         stage.show();
     }

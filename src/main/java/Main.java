@@ -16,7 +16,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
+    // 10.09   TEST
 //    private Stage primaryStage;
 //    private BorderPane rootLayout;
 
@@ -85,8 +85,8 @@ public class Main extends Application {
         //TODO: check language sys parametr
         ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.bundle", new Locale("de"));
         Parent root = FXMLLoader.load(getClass().getResource("/w_start08.fxml"), resourceBundle);
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 600, 600));
+        primaryStage.setTitle("INSULIN APP");
+        primaryStage.setScene(new Scene(root, 480, 280));
         primaryStage.show();
     }
 
