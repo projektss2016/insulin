@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--TODO in projekt  LAyoutRoot implementieren-->
+
+
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+<top><MenuBar BorderPane.alignment="CENTER">
+    <menus>
+        <Menu fx:id="mnAdmin" mnemonicParsing="false" text="Administrieren">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Admin" />
+
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Benutzer">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Berechnen" />
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Zurück">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="Hilfe">
+              <items>
+                <MenuItem mnemonicParsing="false" text="About" />
+              </items>
+            </Menu>
+    </menus>
+</MenuBar>
+</top></BorderPane>

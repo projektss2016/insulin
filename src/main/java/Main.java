@@ -7,16 +7,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
+
 
 public class Main extends Application {
-    // 10.09   TEST
+    // 12.09   TEST  Letzte Version
 //    private Stage primaryStage;
 //    private BorderPane rootLayout;
 
@@ -89,9 +84,18 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 480, 280));
         primaryStage.show();
     }
-
-
-//    public static void main(String[] args) {
-//        launch(args);
+    // DB BLOC TODO
+    //
+    //
+//try {
+//        Parent root = FXMLLoader.load(getClass().getResource("w_Start.fxml"));
+//        Scene scene = new Scene(root);
+//        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
+//    } catch(Exception e) {
+//        e.printStackTrace();
 //    }
+
+
 }
