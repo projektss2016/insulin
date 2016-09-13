@@ -21,8 +21,7 @@ public class adminAktioncontroller {
     @FXML
     Button btnProdukt;
        @FXML
-            Button btnZuruck2;
-
+            Button btnZuruckAdmin;
 
     Stage stage = null;
     Parent root = null;
@@ -40,7 +39,7 @@ public class adminAktioncontroller {
         if (event.getSource() == btnProdukt) {
             stage = (Stage) btnProdukt.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Berechnen.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Berechnung.fxml"));
         }
 
         //create a new scene with root and set the stage
@@ -48,12 +47,12 @@ public class adminAktioncontroller {
         stage.setTitle("Insulin APP");
         stage.show();
     }
-    public void onClickAdmAkt(ActionEvent event) throws IOException {
+    public void onClickZuruckAdmin(ActionEvent event) throws IOException {
         Stage stage = null;
         Parent root = null;
-        stage = (Stage) btnZuruck2.getScene().getWindow();
+        stage = (Stage) btnZuruckAdmin.getScene().getWindow();
         //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Passwort08.fxml"));
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 400));
