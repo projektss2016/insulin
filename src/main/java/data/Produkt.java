@@ -5,7 +5,7 @@ package data;
  */
 public class Produkt {
 
-    private String produktName;
+    private final String produktName;
     private int produktFaktor;
 
     public Produkt(String produktName, int produktFaktor) {
