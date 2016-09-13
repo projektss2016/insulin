@@ -20,6 +20,8 @@ import java.util.ResourceBundle;
  * Created by nata on 06.09.2016.
  */
 public class MainController implements Initializable {
+    public static ResourceBundle rbSprache;
+    Locale locSprache;
     static String sprache = "de";
     @FXML
     Button btnStart;
@@ -40,26 +42,43 @@ public class MainController implements Initializable {
 //            //get reference to the button's stage
 //            stage = (Stage) btnStart.getScene().getWindow();
 //            //load up OTHER FXML document
-//            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin08.fxml"));
+//            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml")); //w_Admin08
 //        }
         if (event.getSource()== btnDE) {
               sprache = "de";
+            locSprache = new Locale("de","DE");
+            rbSprache = ResourceBundle.getBundle("bundles.bundle",locSprache); //bundles ist das Verzeichnis
+                                                                               //bundle ist der Dateiname
+                                                                               //bundle_de.properties -> nur bundle wird
+                                                                               //genommen, der "_" wird automatisch gemacht
+
             stage = (Stage) btnDE.getScene().getWindow();
             //load up OTHER FXML document
           root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         }
         if (event.getSource()== btnRU) {
               sprache = "ru";
+
+            locSprache = new Locale("ru","RU");
+            rbSprache = ResourceBundle.getBundle("bundles.bundle",locSprache); //bundles ist das Verzeichnis
+            //bundle ist der Dateiname
+            //bundle_de.properties -> nur bundle wird
+            //genommen, der "_" wird automatisch gemacht
             stage = (Stage) btnRU.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         }
+
+        //Sprache setzen für w_Admin0909.fxml
+        ((Label)root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
 
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 270));
         stage.setTitle("Insulin APP");
         stage.show();
     }
+
+
 
     public void initialize(URL location, ResourceBundle resources) {
 //        this.resourceBundle = ResourceBundle.getBundle("bundles.bundle", new Locale("de"));

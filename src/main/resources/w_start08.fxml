@@ -28,7 +28,7 @@
       </ImageView>
       <ImageView fitHeight="34.0" fitWidth="48.0" layoutX="439.0" layoutY="238.0">
          <image>
-            <Image url="@drawable/Russian%20Federation-48.png" />
+            <Image url="@drawable/Russian Federation-48.png" />
          </image>
       </ImageView>
    </children>

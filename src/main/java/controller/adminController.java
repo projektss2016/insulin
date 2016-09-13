@@ -6,9 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+//fuer die Sprache
+import static controller.MainController.rbSprache;
 
 /**
  * Created by nata on 08.09.2016.
@@ -21,6 +27,7 @@ public class adminController {
     @FXML
     Button btnZuruck;
 
+
     public void onClickRoleWindow(ActionEvent event) throws IOException {
         Stage stage = null;
         Parent root = null;
@@ -30,6 +37,9 @@ public class adminController {
             stage = (Stage) btnAdmin.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Passwort08.fxml"));
+            //hier buttons und labels setzen von w_Passwort08.fxml - rbSprache kommt aus MainController
+            ((Label)root.lookup("#IdGebenSieBittePwd")).setText(rbSprache.getString("IdGebenSieBittePwd"));
+
             stage.setScene(new Scene(root, 300, 300));
         }
         if(event.getSource()== btnUser){
@@ -37,6 +47,7 @@ public class adminController {
             stage = (Stage) btnUser.getScene().getWindow();
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Berechnen.fxml"));
+            //hier buttons und labels setzen von w_Berechnen.fxml
             stage.setScene(new Scene(root, 500, 500));
         }
 //        TODO zurück
