@@ -46,7 +46,7 @@ public class adminController {
             //get reference to the button's stage
             stage = (Stage) btnUser.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Berechnen.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_NewProdukt.fxml"));
             //hier buttons und labels setzen von w_Berechnen.fxml
             stage.setScene(new Scene(root, 500, 500));
         }

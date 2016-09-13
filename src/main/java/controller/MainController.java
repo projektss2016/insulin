@@ -71,7 +71,8 @@ public class MainController implements Initializable {
 
         //Sprache setzen für w_Admin0909.fxml
         ((Label)root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
-
+        //((Button)root.lookup("#btnAdmin")).setText(rbSprache.getString("btnAdmin"));
+        //((Button)root.lookup("#btnUser")).setText(rbSprache.getString("btnUser"));
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 270));
         stage.setTitle("Insulin APP");
