@@ -43,7 +43,8 @@
                           </columns>
                         </TableView>
                         <ScrollBar layoutX="493.0" layoutY="65.0" orientation="VERTICAL" />
-                        <Button blendMode="DARKEN" cache="true" cacheHint="QUALITY" layoutX="359.0" layoutY="190.0" mnemonicParsing="false" text="Berechnen">
+                        <Button blendMode="DARKEN" cache="true" cacheHint="QUALITY" layoutX="359.0" layoutY="190.0"
+                                mnemonicParsing="false" text="Berechnen">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
