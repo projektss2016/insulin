@@ -38,9 +38,9 @@
 //    // --------Insert --------
 //    public static void WriteDB() throws SQLException
 //    {
-//        statmt.execute("INSERT INTO 'users' ('ProduktNAme', 'ProduktFaktor') VALUES ('Brot', 125453); ");
-//        statmt.execute("INSERT INTO 'users' ('ProduktNAme', 'ProduktFaktor') VALUES ('Butter', 321789); ");
-//        statmt.execute("INSERT INTO 'users' ('ProduktNAme', 'ProduktFaktor') VALUES ('Apfel', 456123); ");
+//        statmt.execute("INSERT INTO 'ProduktTab1' ('ProduktNAme', 'ProduktFaktor') VALUES ('Brot', 125453); ");
+//        statmt.execute("INSERT INTO 'ProduktTab1' ('ProduktNAme', 'ProduktFaktor') VALUES ('Butter', 321789); ");
+//        statmt.execute("INSERT INTO 'ProduktTab1' ('ProduktNAme', 'ProduktFaktor') VALUES ('Apfel', 456123); ");
 //
 //
 //    }
