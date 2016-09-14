@@ -42,13 +42,13 @@
                            </font>
                         </Button>
                         <ImageView fitHeight="126.0" fitWidth="181.0" layoutX="118.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fitHeight="81.0" fitWidth="157.0" layoutX="130.0" layoutY="191.0">
+                        <Label layoutX="169.0" layoutY="57.0" text="pro 100 g" />
+                        <TextField layoutX="21.0" layoutY="79.0" prefHeight="25.0" prefWidth="124.0" />
+                        <ImageView fitHeight="91.0" fitWidth="144.0" layoutX="148.0" layoutY="186.0">
                            <image>
                               <Image url="@drawable/images (13).jpg" />
                            </image>
                         </ImageView>
-                        <Label layoutX="169.0" layoutY="57.0" text="pro 100 g" />
-                        <TextField layoutX="21.0" layoutY="79.0" prefHeight="25.0" prefWidth="124.0" />
                      </children>
                   </AnchorPane>
             </content>
