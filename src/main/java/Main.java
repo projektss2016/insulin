@@ -81,9 +81,10 @@ public class Main extends Application {
 
 
         ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.bundle", new Locale("de"));
-        Parent root = FXMLLoader.load(getClass().getResource("/w_start08.fxml"), resourceBundle);
+        Parent root = FXMLLoader.load(getClass().getResource("/w_start_14.fxml"), resourceBundle);
         primaryStage.setTitle("INSULIN APP ");
-        primaryStage.setScene(new Scene(root, 480, 280));
+        //primaryStage.setScene(new Scene(root, 480, 280));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
     }

@@ -23,8 +23,8 @@ public class MainController implements Initializable {
     public static ResourceBundle rbSprache;
     Locale locSprache;
     static String sprache = "de";
-    @FXML
-    Button btnStart;
+    // @FXML
+    // Button btnStart;
     @FXML
     Label label;
     @FXML
