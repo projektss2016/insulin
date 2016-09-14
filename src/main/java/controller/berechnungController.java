@@ -11,7 +11,8 @@ package controller;
                 import javafx.scene.control.Button;
                 import javafx.scene.control.Label;
                 import javafx.scene.control.PasswordField;
-                import javafx.stage.Stage;
+        import javafx.scene.control.Tab;
+        import javafx.stage.Stage;
 
                 import java.io.IOException;
                 import java.util.Arrays;
@@ -25,6 +26,8 @@ public class berechnungController {
 
     @FXML
     Button btnZuruckAdminAktion;
+@FXML
+    Tab tabAdmin;
 
     ////TODO
 
@@ -33,7 +36,7 @@ public class berechnungController {
         Parent root = null;
         stage = (Stage) btnZuruckAdminAktion.getScene().getWindow();
         //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Adminaktion.fxml"));
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 400));
@@ -42,4 +45,18 @@ public class berechnungController {
 
 
     }
+//    public void   onClickTabAdmin(ActionEvent event) throws IOException {
+//        Stage stage = null;
+//        Parent root = null;
+//        stage = (Stage) tabAdmin.getScene().getWindow();
+//        //load up OTHER FXML document
+//        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
+//        //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
+//        //create a new scene with root and set the stage
+//        stage.setScene(new Scene(root, 600, 400));
+//        stage.setTitle("Insulin APP");
+//        stage.show();
+//
+//
+//    }
 }

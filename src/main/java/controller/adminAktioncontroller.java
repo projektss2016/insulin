@@ -39,7 +39,7 @@ public class adminAktioncontroller {
         if (event.getSource() == btnProdukt) {
             stage = (Stage) btnProdukt.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Berechnung.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("Profil_Produkt.fxml"));
         }
 
         //create a new scene with root and set the stage

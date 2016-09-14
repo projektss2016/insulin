@@ -36,7 +36,7 @@ public void onClickPasswort(ActionEvent event) throws IOException {
 //    if (event.getSource() == btnPasswort ){
         stage = (Stage) btnPasswort.getScene().getWindow();
         //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Adminaktion.fxml"));
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("Profil_Produkt.fxml"));
         stage.setScene(new Scene(root, 600, 400));
         stage.setTitle("Insulin APP");
         stage.show();

@@ -25,7 +25,7 @@ public class adminController {
     @FXML
     Button btnUser;
     @FXML
-    Button btnZuruck;
+    Button btnZuruckStart;
 
 
     public void onClickRoleWindow(ActionEvent event) throws IOException {
@@ -46,26 +46,41 @@ public class adminController {
             //get reference to the button's stage
             stage = (Stage) btnUser.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_NewProdukt.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Berechnung.fxml"));
             //hier buttons und labels setzen von w_Berechnen.fxml
-            stage.setScene(new Scene(root, 500, 500));
-        }
-//        TODO zurück
-//        if(event.getSource()== btnZuruck){
-//            //get reference to the button's stage
-//            stage = (Stage) btnZuruck.getScene().getWindow();
-//            //load up OTHER FXML document
-//            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_start08.fxml"));
-//        stage.setScene(new Scene(root, 500, 500));
-//
-//        }
+            stage.setScene(new Scene(root, 700, 500));
+        }}
 
-
+    public void   onClickRoleWindowZuruck(ActionEvent event) throws IOException {
+        Stage stage = null;
+        Parent root = null;
+        stage = (Stage) btnZuruckStart.getScene().getWindow();
+        //load up OTHER FXML document
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_start08.fxml"));
+        //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
         //create a new scene with root and set the stage
-       // stage.setScene(new Scene(root, 300, 300));
+        stage.setScene(new Scene(root, 600, 400));
         stage.setTitle("Insulin APP");
         stage.show();
+
+
+//        TODO zurück
+//    public void onClickRoleWindowZuruck(ActionEvent event) throws IOException {
+//        Stage stage = null;
+//        Parent root = null;
+//        if (event.getSource() == btnZuruckStart) {
+//            //get reference to the button's stage
+//            stage = (Stage) btnZuruckStart.getScene().getWindow();
+//            //load up OTHER FXML document
+//            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_start08.fxml"));
+//            stage.setScene(new Scene(root, 500, 500));
+//
+
+            //create a new scene with root and set the stage
+            // stage.setScene(new Scene(root, 300, 300));
+//            stage.setTitle("Insulin APP");
+//            stage.show();
+        }
     }
 
 
-}
