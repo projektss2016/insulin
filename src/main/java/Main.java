@@ -73,7 +73,7 @@ public class Main extends Application {
         launch(args);
     }
 
-//    DatBase myDB = new DatBase();
+//  DatBase myDB = new DatBase();
 
     @Override
     public void start(Stage primaryStage) throws IOException, SQLException, ClassNotFoundException {
