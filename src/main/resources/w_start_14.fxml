@@ -31,12 +31,12 @@
             <Image url="@drawable/mother-child-reading.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="216.0" layoutY="253.0" text="Willkommen" textFill="#0b2cb2">
+      <Label id="IdWllknLbl" fx:id="fxWllknLbl" layoutX="216.0" layoutY="253.0" text="Willkommen" textFill="#0b2cb2">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>
       </Label>
-      <Label layoutX="49.0" layoutY="28.0" text="Wählen Sie eine Sprache zum starten" textFill="#122db5">
+      <Label id="IdWhlnLbl" fx:id="fxWhlnLbl" layoutX="49.0" layoutY="28.0" text="Wählen Sie eine Sprache zum starten" textFill="#122db5">
          <font>
             <Font name="System Bold Italic" size="20.0" />
          </font>
