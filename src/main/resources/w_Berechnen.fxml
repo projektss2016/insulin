@@ -42,7 +42,7 @@
                     </HBox>
                   <ImageView fitHeight="133.0" fitWidth="210.0" layoutX="-14.0" layoutY="150.0">
                      <image>
-                        <Image url="@drawable/images%20(12).jpg" />
+                        <!--<Image url="@drawable/images%20(12).jpg" />-->
                      </image>
                   </ImageView>
                 </children></AnchorPane>

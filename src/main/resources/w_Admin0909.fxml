@@ -15,12 +15,12 @@
       <Button fx:id="btnUser" layoutX="353.0" layoutY="199.0" mnemonicParsing="false" onAction="#onClickRoleWindow" prefHeight="31.0" prefWidth="192.0" text="User" />
       <ImageView fitHeight="152.0" fitWidth="192.0" layoutX="353.0" layoutY="47.0">
          <image>
-            <Image url="@drawable/images%20(6).jpg" />
+            <!--<Image url="@drawable/images%20(6).jpg" />-->
          </image>
       </ImageView>
       <ImageView fitHeight="152.0" fitWidth="235.0" layoutX="31.0" layoutY="47.0">
          <image>
-            <Image url="@drawable/images%20(9).jpg" />
+            <!--<Image url="@drawable/images%20(9).jpg" />-->
          </image>
       </ImageView>
       <!--TODO Zurück -->

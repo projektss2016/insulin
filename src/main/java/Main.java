@@ -1,3 +1,4 @@
+import DB.conn;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -5,15 +6,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
 public class Main extends Application {
 
@@ -78,16 +73,23 @@ public class Main extends Application {
         launch(args);
     }
 
-
+//    DatBase myDB = new DatBase();
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) throws IOException, SQLException, ClassNotFoundException {
         //TODO: check language sys parametr
+        conn.Conn();
+        conn.CreateDB();
+        conn.WriteDB();
+        conn.ReadDB();
+        conn.CloseDB();
+
         ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.bundle", new Locale("de"));
         Parent root = FXMLLoader.load(getClass().getResource("/w_start08.fxml"), resourceBundle);
         primaryStage.setTitle("INSULIN APP ");
         primaryStage.setScene(new Scene(root, 480, 280));
         primaryStage.show();
+
     }
 
 
