@@ -32,16 +32,17 @@ public class MySqlQueries {
     // --------DB create--------
     public void CreateDB() throws ClassNotFoundException, SQLException {
         statmt = conn.createStatement();
-        statmt.execute("CREATE TABLE if not exists 'ProduktTab1' ('ProduktName' VARCHAR  PRIMARY KEY, " +
-                "'PrduktFaktor' REAL );");
+        statmt.execute("CREATE TABLE if not exists 'ProduktTab2' ('ProduktName' VARCHAR  PRIMARY KEY, " +
+                "'name' REAL );");
 
     }
 
     // --------Insert --------
     public static void WriteDB() throws SQLException {
-        statmt.execute("INSERT INTO 'ProduktTab1' ('ProduktNAme', 'ProduktFaktor') VALUES ('Brot', 125453); ");
-        statmt.execute("INSERT INTO 'ProduktTab1' ('ProduktNAme', 'ProduktFaktor') VALUES ('Butter', 321789); ");
-        statmt.execute("INSERT INTO 'ProduktTab1' ('ProduktNAme', 'ProduktFaktor') VALUES ('Apfel', 456123); ");
+        statmt = conn.createStatement();
+        statmt.execute("INSERT INTO ProduktTab2 ('ProduktName', 'name') VALUES ('Brot', 125.453); ");
+        statmt.execute("INSERT INTO ProduktTab2 ('ProduktName', 'name') VALUES ('Butter', 321.789); ");
+        statmt.execute("INSERT INTO ProduktTab2 ('ProduktName', 'name') VALUES ('Apfel', 45.6123); ");
     }
 
     // -------- output--------
@@ -51,7 +52,7 @@ public class MySqlQueries {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        resSet = statmt.executeQuery("SELECT * FROM ProduktTab1;");
+        resSet = statmt.executeQuery("SELECT * FROM ProduktTab;");
 
         while (resSet.next()) {
             String ProduktName = resSet.getString("ProduktName");

@@ -81,7 +81,8 @@ public class Main extends Application {
         //TODO: check language sys parametr
         MySqlQueries mySqlQueries = new MySqlQueries();
 
-        mySqlQueries.CreateDB();
+//        mySqlQueries.CreateDB();
+//        mySqlQueries.WriteDB();
         mySqlQueries.ReadDB();
 
         ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.bundle", new Locale("de"));

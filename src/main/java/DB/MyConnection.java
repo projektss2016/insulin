@@ -15,7 +15,7 @@ public class MyConnection {
         if (connection == null){
             try {
                 Class.forName("org.sqlite.JDBC");
-                connection = DriverManager.getConnection("jdbc:sqlite:ProduktTab.db");
+                connection = DriverManager.getConnection("jdbc:sqlite:ProduktTab.s3db");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (SQLException e) {
