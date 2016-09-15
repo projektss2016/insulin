@@ -40,7 +40,7 @@ public class adminController {
             //hier buttons und labels setzen von w_Passwort08.fxml - rbSprache kommt aus MainController
             ((Label)root.lookup("#IdGebenSieBittePwd")).setText(rbSprache.getString("IdGebenSieBittePwd"));
 
-            stage.setScene(new Scene(root, 300, 300));
+            stage.setScene(new Scene(root));
         }
         if(event.getSource()== btnUser){
             //get reference to the button's stage
@@ -48,7 +48,7 @@ public class adminController {
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Berechnung.fxml"));
             //hier buttons und labels setzen von w_Berechnen.fxml
-            stage.setScene(new Scene(root, 700, 500));
+            stage.setScene(new Scene(root));
         }}
 
     public void   onClickRoleWindowZuruck(ActionEvent event) throws IOException {
@@ -59,7 +59,7 @@ public class adminController {
         root = FXMLLoader.load(getClass().getClassLoader().getResource("w_start_14.fxml"));
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
         //create a new scene with root and set the stage
-        stage.setScene(new Scene(root, 600, 400));
+        stage.setScene(new Scene(root));
         stage.setTitle("Insulin APP");
         stage.show();
 

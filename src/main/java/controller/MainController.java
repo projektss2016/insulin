@@ -74,7 +74,7 @@ public class MainController implements Initializable {
         //((Button)root.lookup("#btnAdmin")).setText(rbSprache.getString("btnAdmin"));
         //((Button)root.lookup("#btnUser")).setText(rbSprache.getString("btnUser"));
         //create a new scene with root and set the stage
-        stage.setScene(new Scene(root, 600, 270));
+        stage.setScene(new Scene(root));
         stage.setTitle("Insulin APP");
         stage.show();
     }

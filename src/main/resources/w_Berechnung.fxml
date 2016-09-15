@@ -58,16 +58,6 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab fx:id="tabAdmin" text="Adminstration">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
-            <Tab text="Tagebuch">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" visible="false" />
-              </content>
-            </Tab>
         </tabs>
       </TabPane>
    </children>

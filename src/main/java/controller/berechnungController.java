@@ -39,7 +39,7 @@ public class berechnungController {
         root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
         //create a new scene with root and set the stage
-        stage.setScene(new Scene(root, 600, 400));
+        stage.setScene(new Scene(root));
         stage.setTitle("Insulin APP");
         stage.show();
 
