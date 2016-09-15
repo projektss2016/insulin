@@ -20,7 +20,7 @@
         <tabs>
           <Tab closable="false" text="Berechnung">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="600.0">
+              <AnchorPane prefHeight="333.0" prefWidth="600.0">
                      <children>
                         <Label layoutX="45.0" layoutY="48.0" text="Produkte">
                            <font>
@@ -54,6 +54,7 @@
                            </image>
                         </ImageView>
                         <Button fx:id="btnZuruckAdminAktion" layoutX="359.0" layoutY="232.0" mnemonicParsing="false" onAction="#onClickZuruckAdminAktion" prefHeight="22.0" prefWidth="93.0" text="Zurueck" />
+                        <Button layoutX="101.0" layoutY="164.0" mnemonicParsing="false" text="Hinzufuegen" />
                      </children>
                   </AnchorPane>
             </content>
