@@ -68,6 +68,7 @@
                         <Button layoutX="192.0" layoutY="246.0" mnemonicParsing="false" text="speichern" />
                         <Button fx:id="btnZurückProdukt" onAction="#onClickZuruck" layoutX="349.0" layoutY="246.0"
                                 mnemonicParsing="false" text="zurück" />
+                         <!--<Image url="@drawable/images%20(8).jpg" />-->
                      </children>
                   </AnchorPane>
                </content>

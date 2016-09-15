@@ -56,7 +56,7 @@ public class adminController {
         Parent root = null;
         stage = (Stage) btnZuruckStart.getScene().getWindow();
         //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_start08.fxml"));
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_start_14.fxml"));
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 400));

@@ -10,7 +10,7 @@ public class Produkt {
 
     public Produkt(String produktName, int produktFaktor) {
         this.produktName= produktName;
-        this.produktFaktor = produktFaktor;
+//        this.produktFaktor = produktFaktor;
     }
 
     public String getProduktName() {
@@ -21,11 +21,11 @@ public class Produkt {
     }
 
 
-    public int getProduktFaktor() {
-        return produktFaktor;
-    }
-    public void setProduktFaktor(int produktFaktor) {
-        this.produktFaktor = produktFaktor;
-    }
+//    public int getProduktFaktor() {
+//        return produktFaktor;
+//    }
+//    public void setProduktFaktor(int produktFaktor) {
+//        this.produktFaktor = produktFaktor;
+//    }
 
 }
