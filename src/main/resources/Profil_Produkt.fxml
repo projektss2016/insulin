@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="controller.newProduktcontroller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.newProduktcontroller">
    <children>
       <TabPane layoutX="14.0" layoutY="41.0" prefHeight="332.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="41.0">
         <tabs>
@@ -32,8 +32,7 @@
                           </columns>
                         </TableView>
                         <ScrollBar layoutX="493.0" layoutY="65.0" orientation="VERTICAL" visible="false" />
-                        <Button fx:id="btnProduktSpeichen" onAction="#onClickProduktSpeichen" blendMode="DARKEN" cache="true" cacheHint="QUALITY" layoutX="103.0"
-                                layoutY="126.0" mnemonicParsing="false" text="Speichen">
+                        <Button fx:id="btnProduktSpeichen" blendMode="DARKEN" cache="true" cacheHint="QUALITY" layoutX="103.0" layoutY="126.0" mnemonicParsing="false" onAction="#onClickProduktSpeichen" text="Speichern">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
@@ -41,12 +40,11 @@
                               <Font name="Arial Bold" size="14.0" />
                            </font>
                         </Button>
-                        <ImageView fitHeight="126.0" fitWidth="181.0" layoutX="118.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
                         <Label layoutX="169.0" layoutY="57.0" text="pro 100 g" />
                         <TextField layoutX="21.0" layoutY="79.0" prefHeight="25.0" prefWidth="124.0" />
-                        <ImageView fitHeight="91.0" fitWidth="144.0" layoutX="148.0" layoutY="186.0">
+                        <ImageView fitHeight="115.0" fitWidth="181.0" layoutX="28.0" layoutY="165.0">
                            <image>
-       <!--                       <Image url="@drawable/images (13).jpg" /> -->
+                              <Image url="@drawable/neu_produkt.jpg" />
                            </image>
                         </ImageView>
                      </children>
@@ -66,9 +64,7 @@
                         <Label layoutX="129.0" layoutY="143.0" text="Gewicht" />
                         <Label layoutX="78.0" layoutY="192.0" text="Persönlicher Faktor" />
                         <Button layoutX="192.0" layoutY="246.0" mnemonicParsing="false" text="speichern" />
-                        <Button fx:id="btnZurückProdukt" onAction="#onClickZuruck" layoutX="349.0" layoutY="246.0"
-                                mnemonicParsing="false" text="zurück" />
-                         <!--<Image url="@drawable/images%20(8).jpg" />-->
+                        <Button fx:id="btnZurückProdukt" layoutX="348.0" layoutY="246.0" mnemonicParsing="false" onAction="#onClickZuruck" text="zurück" />
                      </children>
                   </AnchorPane>
                </content>
