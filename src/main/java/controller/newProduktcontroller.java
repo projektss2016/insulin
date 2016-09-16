@@ -25,16 +25,16 @@ package controller;
 public class newProduktcontroller {
 
     @FXML
-    Button btnZurückProdukt;
+    Button fxNeuProduktZrckBtn;
     @FXML
-    Button btnProduktSpeichen;
+    Button fxNeuProduktSpchrnBtn;
 
     ////TODO
 
     public void onClickProduktSpeichen(ActionEvent event) throws IOException {
         Stage stage = null;
         Parent root = null;
-        stage = (Stage) btnProduktSpeichen.getScene().getWindow();
+        stage = (Stage) fxNeuProduktSpchrnBtn.getScene().getWindow();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
@@ -49,7 +49,7 @@ public class newProduktcontroller {
     public void onClickZuruck(ActionEvent event) throws IOException {
         Stage stage = null;
         Parent root = null;
-        stage = (Stage) btnZurückProdukt.getScene().getWindow();
+        stage = (Stage) fxNeuProduktZrckBtn.getScene().getWindow();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));

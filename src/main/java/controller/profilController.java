@@ -23,14 +23,14 @@ package controller;
 public class profilController {
 
     @FXML
-    Button btnZurückProfil;
+    Button fxPrflZrckBtn;
 
     ////TODO
 
     public void onClickZurueck(ActionEvent event) throws IOException {
         Stage stage = null;
         Parent root = null;
-        stage = (Stage) btnZurückProfil.getScene().getWindow();
+        stage = (Stage) fxPrflZrckBtn.getScene().getWindow();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Adminaktion.fxml"));
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));

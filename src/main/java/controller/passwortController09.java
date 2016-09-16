@@ -21,9 +21,9 @@ import static controller.MainController.rbSprache;
  */
 public class passwortController09 {
     @FXML
-    Button btnPasswort;
+    Button IdPsswdBtn;
     @FXML
-    Button btnZurückPass;
+    Button IdPsswZrckBtn;
     @FXML
     PasswordField flPasswort;
 ////TODO
@@ -32,9 +32,9 @@ public void onClickPasswort(ActionEvent event) throws IOException {
     Parent root = null;
     final Passwort pass = new Passwort("insulin");
 //TODO
-    if (event.getSource() == btnPasswort & pass.getKod().equals(flPasswort.getText())) {
+    if (event.getSource() == IdPsswdBtn & pass.getKod().equals(flPasswort.getText())) {
 //    if (event.getSource() == btnPasswort ){
-        stage = (Stage) btnPasswort.getScene().getWindow();
+        stage = (Stage) IdPsswdBtn.getScene().getWindow();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getClassLoader().getResource("Profil_Produkt.fxml"));
         stage.setScene(new Scene(root, 600, 400));
@@ -48,7 +48,7 @@ public void onClickPasswort(ActionEvent event) throws IOException {
      public void onClickZurueck(ActionEvent event) throws IOException {
          Stage stage = null;
          Parent root = null;
-         stage = (Stage) btnZurückPass.getScene().getWindow();
+         stage = (Stage) IdPsswZrckBtn.getScene().getWindow();
          //load up OTHER FXML document
          root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
          ((Label)root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
