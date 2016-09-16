@@ -38,7 +38,7 @@ public class adminController {
             //load up OTHER FXML document
             root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Passwort08.fxml"));
             //hier buttons und labels setzen von w_Passwort08.fxml - rbSprache kommt aus MainController
-            ((Label)root.lookup("#IdGebenSieBittePwd")).setText(rbSprache.getString("IdGebenSieBittePwd"));
+            ((Label)root.lookup("#IdGebenSieBittePwdLbl")).setText(rbSprache.getString("IdGebenSieBittePwdLbl"));
 
             stage.setScene(new Scene(root));
         }
