@@ -32,8 +32,7 @@
                               <Font name="System Bold Italic" size="12.0" />
                            </font></Label>
                         <ComboBox id="IdBerProduktCb" fx:id="fxBerProduktCb" layoutX="20.0" layoutY="53.0" prefHeight="25.0" prefWidth="123.0" promptText="Produktname" />
-                        <TextField layoutX="166.0" layoutY="53.0" prefHeight="25.0" prefWidth="59.0" />
-                        <TextField id="IdBerPersFaktTfld" fx:id="fxBerPersFaktTfld" disable="true" layoutX="338.0" layoutY="23.0" prefHeight="25.0" prefWidth="122.0" text="Persönlicher Faktor" />
+                        <TextField id="IdBerMngTfld" fx:id="fxBerMngTfld" layoutX="166.0" layoutY="53.0" prefHeight="25.0" prefWidth="59.0" />
                         <TableView layoutX="293.0" layoutY="65.0" prefHeight="99.0" prefWidth="200.0">
                           <columns>
                             <TableColumn id="IdBerMngTbl" fx:id="fxBerMngTbl" prefWidth="75.0" text="Menge" />
@@ -56,6 +55,7 @@
                               <Image url="@drawable/berechnung.jpg" />
                            </image>
                         </ImageView>
+                        <TextField id="IdBerPersFaktTfld" fx:id="fxBerPersFaktTfld" disable="true" layoutX="345.0" layoutY="23.0" prefHeight="25.0" prefWidth="122.0" text="Persönlicher Faktor" />
                      </children>
                   </AnchorPane>
             </content>
