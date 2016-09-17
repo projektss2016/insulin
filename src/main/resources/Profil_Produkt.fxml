@@ -48,7 +48,7 @@
                               <Image url="@drawable/neu_produkt.jpg" />
                            </image>
                         </ImageView>
-                        <Button id="IdNeuProduktZrckBtn" fx:id="fxNeuProduktZrckBtn" layoutX="362.0" layoutY="223.0" mnemonicParsing="false" text="zurück" />
+                        <Button id="IdNeuProduktZrckBtn" fx:id="fxNeuProduktZrckBtn" layoutX="362.0" layoutY="223.0" mnemonicParsing="false" onAction="#onClickZuruck" text="zurück" />
                      </children>
                   </AnchorPane>
             </content>

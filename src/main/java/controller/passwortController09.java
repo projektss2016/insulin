@@ -54,7 +54,7 @@ public void onClickPasswort(ActionEvent event) throws IOException {
          root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
          HilfsFunktionen.setzeSprache("Admin",root);
          //create a new scene with root and set the stage
-                stage.setScene(new Scene(root, 600, 270));
+                stage.setScene(new Scene(root));
         stage.setTitle("Insulin APP");
         stage.show();
 
