@@ -1,8 +1,9 @@
 package data;
 
+import javafx.collections.ObservableList;
+import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
 import java.util.ResourceBundle;
 
@@ -33,6 +34,42 @@ public class HilfsFunktionen {
             ((Button)root.lookup("#IdPsswdBtn")).setText(rbSprache.getString("IdPsswdBtn"));
 
         } else if ( meineFxml.equals("NeuesProdukt")) {
+
+            //Tab umbenennen
+            if (root.lookup("#IdNeuProduktTbPn")!=null) {
+                for (Tab aTab : ((TabPane) root.lookup("#IdNeuProduktTbPn")).getTabs()) {
+                    if (aTab.getId().equals("IdNeuProduktTab")) {
+                        aTab.setText(rbSprache.getString("IdNeuProduktTab"));
+
+                    } else if (aTab.getId().equals("IdProfilTab")) {
+                        aTab.setText(rbSprache.getString("IdProfilTab"));
+                    }
+                }
+                ;
+            }
+
+
+            //Spalten in der Tabelle umbenennen
+            if (root.lookup("#IdNeuProduktTbl")!=null) {
+                /* - geht auch
+                ObservableList<TableColumn> columns = ((TableView) root.lookup("#IdNeuProduktTbl")).getColumns();
+                for (TableColumn column : columns) {
+                    if (column.getId().equals("IdNeuProduktProduktTblCl")) {
+                        column.setText(rbSprache.getString("IdNeuProduktProduktTblCl"));
+                    } else if (column.getId().equals("IdNeuProduktKhlnHydrTblCl")) {
+                        column.setText(rbSprache.getString("IdNeuProduktKhlnHydrTblCl"));
+                }
+                */
+                for (Object aCol : ((TableView) root.lookup("#IdNeuProduktTbl")).getColumns()) {
+                    if (((TableColumn) aCol).getId().equals("IdNeuProduktProduktTblCl")) {
+                        ((TableColumn) aCol).setText(rbSprache.getString("IdNeuProduktProduktTblCl"));
+                    } else if (((TableColumn) aCol).getId().equals("IdNeuProduktKhlnHydrTblCl")) {
+                        ((TableColumn) aCol).setText(rbSprache.getString("IdNeuProduktKhlnHydrTblCl"));
+                    }
+
+                }
+            }
+
             ((Label)root.lookup("#IdNeuProduktLbl")).setText(rbSprache.getString("IdNeuProduktLbl"));
             ((Label)root.lookup("#IdNeuProduktKhlnHydrLbl")).setText(rbSprache.getString("IdNeuProduktKhlnHydrLbl"));
             ((Label)root.lookup("#IdPro100gLbl")).setText(rbSprache.getString("IdPro100gLbl"));
@@ -52,7 +89,32 @@ public class HilfsFunktionen {
             ((Button)root.lookup("#IdBerBrchnBtn")).setText(rbSprache.getString("IdBerBrchnBtn"));
             ((Button)root.lookup("#IdBtnZuruckAdminAktion")).setText(rbSprache.getString("IdBtnZuruckAdminAktion"));
 
+            ((TextField)root.lookup("#IdBerMngTfld")).setText(rbSprache.getString("IdBerMngTfld"));
 
+            //Tab umbenennen
+            if (root.lookup("#IdBerTbPn")!=null) {
+                for (Tab aTab : ((TabPane) root.lookup("#IdBerTbPn")).getTabs()) {
+                    if (aTab.getId().equals("IdBerBrngTb")) {
+                        aTab.setText(rbSprache.getString("IdBerBrngTb"));
+
+                    }
+                }
+                ;
+            }
+
+
+            //Spalten in der Tabelle umbenennen
+            if (root.lookup("#IdBerTbl")!=null) {
+
+                for (Object aCol : ((TableView) root.lookup("#IdBerTbl")).getColumns()) {
+                    if (((TableColumn) aCol).getId().equals("IdBerMngTblCl")) {
+                        ((TableColumn) aCol).setText(rbSprache.getString("IdBerMngTblCl"));
+                    } else if (((TableColumn) aCol).getId().equals("IdBerProduktTblCl")) {
+                        ((TableColumn) aCol).setText(rbSprache.getString("IdBerProduktTblCl"));
+                    }
+
+                }
+            }
         }
 
     }

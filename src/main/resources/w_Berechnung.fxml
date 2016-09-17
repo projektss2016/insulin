@@ -17,9 +17,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.berechnungController">
    <children>
-      <TabPane layoutX="22.0" layoutY="52.0" prefHeight="332.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="52.0">
+      <TabPane id="IdBerTbPn" fx:id="fxBerTbPn" layoutX="22.0" layoutY="52.0" prefHeight="332.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="52.0">
         <tabs>
-          <Tab id="ber" closable="false" text="Berechnung">
+          <Tab id="IdBerBrngTb" fx:id="fxBerBrngTb" closable="false" text="Berechnung">
             <content>
               <AnchorPane prefHeight="466.0" prefWidth="815.0">
                      <children>
@@ -33,10 +33,10 @@
                            </font></Label>
                         <ComboBox id="IdBerProduktCb" fx:id="fxBerProduktCb" layoutX="20.0" layoutY="53.0" prefHeight="25.0" prefWidth="123.0" promptText="Produktname" />
                         <TextField id="IdBerMngTfld" fx:id="fxBerMngTfld" layoutX="166.0" layoutY="53.0" prefHeight="25.0" prefWidth="59.0" />
-                        <TableView layoutX="293.0" layoutY="65.0" prefHeight="99.0" prefWidth="200.0">
+                        <TableView id="IdBerTbl" fx:id="fxBerTbl" layoutX="293.0" layoutY="65.0" prefHeight="99.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn id="IdBerMngTbl" fx:id="fxBerMngTbl" prefWidth="75.0" text="Menge" />
-                            <TableColumn id="IdBerProduktTbl" fx:id="fxBerProduktTbl" prefWidth="75.0" text="Produkt " />
+                            <TableColumn id="IdBerMngTblCl" fx:id="fxBerMngTblCl" prefWidth="75.0" text="Menge" />
+                            <TableColumn id="IdBerProduktTblCl" fx:id="fxBerProduktTblCl" prefWidth="75.0" text="Produkt " />
                           </columns>
                         </TableView>
                         <ScrollBar layoutX="493.0" layoutY="65.0" orientation="VERTICAL" />
