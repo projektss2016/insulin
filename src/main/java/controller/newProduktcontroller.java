@@ -17,7 +17,7 @@ package controller;
         import java.io.IOException;
         import java.util.Arrays;
 
-        import static controller.MainController.rbSprache;
+        import data.HilfsFunktionen;
 
 /**
  * Created by nata on 09.09.2016.
@@ -37,6 +37,7 @@ public class newProduktcontroller {
         stage = (Stage) fxNeuProduktSpchrnBtn.getScene().getWindow();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
+        HilfsFunktionen.setzeSprache("Admin",root);
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 400));
@@ -52,6 +53,7 @@ public class newProduktcontroller {
         stage = (Stage) fxNeuProduktZrckBtn.getScene().getWindow();
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
+        HilfsFunktionen.setzeSprache("Admin",root);
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 400));
