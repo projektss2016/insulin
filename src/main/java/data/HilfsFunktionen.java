@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import java.util.ResourceBundle;
 
 /**
- * Created by julian on 17.09.2016.
+ * Created by flora on 17.09.2016.
  */
 public class HilfsFunktionen {
     static ResourceBundle rbSprache;
@@ -20,7 +20,7 @@ public class HilfsFunktionen {
 
     public static void setzeSprache(String meineFxml, Parent root) {
         if ( meineFxml.equals("Start")) {
-
+            //da wollen wir jetzt erstmal nicht übersetzen - später
         } else if ( meineFxml.equals("Admin")) {
             ((Label)root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
             ((Button)root.lookup("#IdAdminBtn")).setText(rbSprache.getString("IdAdminBtn"));
@@ -33,8 +33,25 @@ public class HilfsFunktionen {
             ((Button)root.lookup("#IdPsswdBtn")).setText(rbSprache.getString("IdPsswdBtn"));
 
         } else if ( meineFxml.equals("NeuesProdukt")) {
+            ((Label)root.lookup("#IdNeuProduktLbl")).setText(rbSprache.getString("IdNeuProduktLbl"));
+            ((Label)root.lookup("#IdNeuProduktKhlnHydrLbl")).setText(rbSprache.getString("IdNeuProduktKhlnHydrLbl"));
+            ((Label)root.lookup("#IdPro100gLbl")).setText(rbSprache.getString("IdPro100gLbl"));
+            ((Button)root.lookup("#IdNeuProduktZrckBtn")).setText(rbSprache.getString("IdNeuProduktZrckBtn"));
+            ((Button)root.lookup("#IdNeuProduktSpchrnBtn")).setText(rbSprache.getString("IdNeuProduktSpchrnBtn"));
+            ((Label)root.lookup("#IdPrflMrgnLbl")).setText(rbSprache.getString("IdPrflMrgnLbl"));
+            ((Label)root.lookup("#IdPrflAbndLbl")).setText(rbSprache.getString("IdPrflAbndLbl"));
+            ((Label)root.lookup("#IdPrflGwchtLbl")).setText(rbSprache.getString("IdPrflGwchtLbl"));
+            ((Label)root.lookup("#IdPrflPersFktLbl")).setText(rbSprache.getString("IdPrflPersFktLbl"));
+            ((Button)root.lookup("#IdPrflSpchrnBtn")).setText(rbSprache.getString("IdPrflSpchrnBtn"));
+            ((Button)root.lookup("#IdPrflZrckBtn")).setText(rbSprache.getString("IdPrflZrckBtn"));
 
         } else if ( meineFxml.equals("Berechnung")) {
+            ((Label)root.lookup("#IdBerProduktLbl")).setText(rbSprache.getString("IdBerProduktLbl"));
+            ((Label)root.lookup("#IdBerMngLbl")).setText(rbSprache.getString("IdBerMngLbl"));
+            ((Button)root.lookup("#IdBerHnzfgBtn")).setText(rbSprache.getString("IdBerHnzfgBtn"));
+            ((Button)root.lookup("#IdBerBrchnBtn")).setText(rbSprache.getString("IdBerBrchnBtn"));
+            ((Button)root.lookup("#IdBtnZuruckAdminAktion")).setText(rbSprache.getString("IdBtnZuruckAdminAktion"));
+
 
         }
 
