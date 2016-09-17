@@ -34,7 +34,7 @@ public class adminAktioncontroller {
 
             stage = (Stage) btnProfil.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Profil.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("Profil_Produkt.fxml"));
         }
         if (event.getSource() == btnProdukt) {
             stage = (Stage) btnProdukt.getScene().getWindow();

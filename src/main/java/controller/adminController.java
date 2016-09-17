@@ -74,7 +74,7 @@ public class adminController {
 //            //get reference to the button's stage
 //            stage = (Stage) btnZuruckStart.getScene().getWindow();
 //            //load up OTHER FXML document
-//            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_start08.fxml"));
+//            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_start14_08.fxml"));
 //            stage.setScene(new Scene(root, 500, 500));
 //
 
