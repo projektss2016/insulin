@@ -67,21 +67,7 @@ public class adminController {
 
 
 //        TODO zurück
-//    public void onClickRoleWindowZuruck(ActionEvent event) throws IOException {
-//        Stage stage = null;
-//        Parent root = null;
-//        if (event.getSource() == btnZuruckStart) {
-//            //get reference to the button's stage
-//            stage = (Stage) btnZuruckStart.getScene().getWindow();
-//            //load up OTHER FXML document
-//            root = FXMLLoader.load(getClass().getClassLoader().getResource("w_start14_08.fxml"));
-//            stage.setScene(new Scene(root, 500, 500));
-//
 
-            //create a new scene with root and set the stage
-            // stage.setScene(new Scene(root, 300, 300));
-//            stage.setTitle("Insulin APP");
-//            stage.show();
         }
     }
 

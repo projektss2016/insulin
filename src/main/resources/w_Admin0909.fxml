@@ -11,9 +11,7 @@
    <children>
       <Button id="IdAdminBtn" fx:id="btnAdmin" layoutX="33.0" layoutY="230.0" mnemonicParsing="false" onAction="#onClickRoleWindow" prefHeight="31.0" prefWidth="235.0" text="Admin" />
       <Button id="IdUserBtn" fx:id="btnUser" layoutX="353.0" layoutY="230.0" mnemonicParsing="false" onAction="#onClickRoleWindow" prefHeight="31.0" prefWidth="192.0" text="User" />
-      <!--TODO Zurück -->
-      <!--<Button fx:id="btnZuruck" onAction="#onClickRoleWindow" layoutY="243.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="329.0" text="Zurück" />-->
-      <Button id="IdRolleZuruckBtn" fx:id="btnZuruckStatr" layoutX="228.0" layoutY="313.0" mnemonicParsing="false" onAction="#onClickRoleWindowZuruck" prefHeight="31.0" prefWidth="173.0" text="Zuruck" />
+      <Button id="IdRolleZuruckBtn" fx:id="btnZuruckStart"   layoutX="228.0" layoutY="313.0" mnemonicParsing="false" onAction="#onClickRoleWindowZuruck" prefHeight="31.0" prefWidth="173.0" text="Zuruck" />
       <Label id="IdRoleWahlen" alignment="CENTER" contentDisplay="CENTER" layoutX="121.0" layoutY="14.0" prefHeight="46.0" prefWidth="343.0" text="Rolle wählen" textAlignment="CENTER">
          <font>
             <Font size="21.0" />
