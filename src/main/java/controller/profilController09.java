@@ -17,7 +17,7 @@ public class profilController09 implements Initializable {
     Button test3btn;
     Label labelName;
     Label labelPersonFaktor;
-    Label labelmorgenDose;
+    Label IdPrflMrgn;
     Label labelAbendDose;
     private User user;
     //TODO SET  for INT

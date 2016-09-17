@@ -15,12 +15,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
+import data.HilfsFunktionen;
 /**
  * Created by nata on 06.09.2016.
  */
 public class MainController implements Initializable {
-    public static ResourceBundle rbSprache;
+    public ResourceBundle rbSprache;
     Locale locSprache;
     static String sprache = "de";
     // @FXML
@@ -48,7 +48,7 @@ public class MainController implements Initializable {
               sprache = "de";
             locSprache = new Locale("de","DE");
             rbSprache = ResourceBundle.getBundle("bundles.bundle",locSprache); //bundles ist das Verzeichnis
-                                                                               //bundle ist der Dateiname
+            HilfsFunktionen.setRbSprache(rbSprache);                                                                   //bundle ist der Dateiname
                                                                                //bundle_de.properties -> nur bundle wird
                                                                                //genommen, der "_" wird automatisch gemacht
 
@@ -61,6 +61,7 @@ public class MainController implements Initializable {
 
             locSprache = new Locale("ru","RU");
             rbSprache = ResourceBundle.getBundle("bundles.bundle",locSprache); //bundles ist das Verzeichnis
+            HilfsFunktionen.setRbSprache(rbSprache);
             //bundle ist der Dateiname
             //bundle_de.properties -> nur bundle wird
             //genommen, der "_" wird automatisch gemacht
@@ -70,11 +71,12 @@ public class MainController implements Initializable {
         }
 
         //Sprache setzen für w_Admin0909.fxml
-        ((Label)root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
+        HilfsFunktionen.setzeSprache("Admin",root);
+        //((Label)root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
         //((Button)root.lookup("#btnAdmin")).setText(rbSprache.getString("btnAdmin"));
         //((Button)root.lookup("#btnUser")).setText(rbSprache.getString("btnUser"));
         //create a new scene with root and set the stage
-        stage.setScene(new Scene(root, 600, 270));
+        stage.setScene(new Scene(root));
         stage.setTitle("Insulin APP");
         stage.show();
     }

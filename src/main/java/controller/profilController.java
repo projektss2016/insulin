@@ -15,7 +15,7 @@ package controller;
         import java.io.IOException;
         import java.util.Arrays;
 
-        import static controller.MainController.rbSprache;
+        import data.HilfsFunktionen;
 
 /**
  * Created by nata on 09.09.2016.
@@ -23,17 +23,18 @@ package controller;
 public class profilController {
 
     @FXML
-    Button btnZurückProfil;
+    Button fxPrflZrckBtn;
 
     ////TODO
 
     public void onClickZurueck(ActionEvent event) throws IOException {
         Stage stage = null;
         Parent root = null;
-        stage = (Stage) btnZurückProfil.getScene().getWindow();
+        stage = (Stage) fxPrflZrckBtn.getScene().getWindow();
         //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Adminaktion.fxml"));
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
+        HilfsFunktionen.setzeSprache("Admin",root);
         //create a new scene with root and set the stage
         stage.setScene(new Scene(root, 600, 400));
         stage.setTitle("Insulin APP");

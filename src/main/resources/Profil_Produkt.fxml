@@ -18,21 +18,21 @@
    <children>
       <TabPane layoutX="14.0" layoutY="41.0" prefHeight="332.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="41.0">
         <tabs>
-          <Tab text="Neu Produkt">
+          <Tab id="IdNeuProduktTab" fx:id="fxNeuProduktTab" text="Neu Produkt">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="333.0" prefWidth="600.0">
+              <AnchorPane prefHeight="333.0" prefWidth="600.0">
                      <children>
-                        <Label layoutX="45.0" layoutY="48.0" text="Produkte" />
-                        <Label layoutX="144.0" layoutY="36.0" prefHeight="24.0" prefWidth="153.0" text="Kohlenhydrate in g" />
-                        <TextField layoutX="161.0" layoutY="79.0" prefHeight="25.0" prefWidth="59.0" />
+                        <Label id="IdNeuProduktLbl" fx:id="fxNeuProduktLbl" layoutX="45.0" layoutY="48.0" text="Produkte" />
+                        <Label id="IdNeuProduktKhlnHydrLbl" fx:id="fxNeuProduktKhlnHydrLbl" layoutX="144.0" layoutY="36.0" prefHeight="24.0" prefWidth="153.0" text="Kohlenhydrate in g" />
+                        <TextField id="IdNeuProduktKhlnHydrTfld" fx:id="fxNeuProduktKhlnHydrTfld" layoutX="161.0" layoutY="79.0" prefHeight="25.0" prefWidth="59.0" />
                         <TableView layoutX="293.0" layoutY="65.0" prefHeight="99.0" prefWidth="241.0">
                           <columns>
-                            <TableColumn prefWidth="90.0" text="Produktname" />
-                            <TableColumn prefWidth="141.0" text="Kohlenhydrate  " />
+                            <TableColumn id="IdNeuProduktProduktTbl" fx:id="fxNeuProduktProduktTbl" prefWidth="90.0" text="Produktname" />
+                            <TableColumn id="IdNeuProduktKhlnHydrTbl" fx:id="fxNeuProduktKhlnHydrTbl" prefWidth="141.0" text="Kohlenhydrate  " />
                           </columns>
                         </TableView>
                         <ScrollBar layoutX="493.0" layoutY="65.0" orientation="VERTICAL" visible="false" />
-                        <Button fx:id="btnProduktSpeichen" blendMode="DARKEN" cache="true" cacheHint="QUALITY" layoutX="103.0" layoutY="126.0" mnemonicParsing="false" onAction="#onClickProduktSpeichen" text="Speichern">
+                        <Button id="IdNeuProduktSpchrnBtn" fx:id="fxNeuProduktSpchrnBtn" blendMode="DARKEN" cache="true" cacheHint="QUALITY" layoutX="103.0" layoutY="126.0" mnemonicParsing="false" onAction="#onClickProduktSpeichen" text="Speichern">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
@@ -40,31 +40,32 @@
                               <Font name="Arial Bold" size="14.0" />
                            </font>
                         </Button>
-                        <Label layoutX="169.0" layoutY="57.0" text="pro 100 g" />
-                        <TextField layoutX="21.0" layoutY="79.0" prefHeight="25.0" prefWidth="124.0" />
+                        <Label id="IdPro100gLbl" fx:id="fxPro100gLbl" layoutX="169.0" layoutY="57.0" text="pro 100 g" />
+                        <TextField id="IdNeuProduktTfld" fx:id="fxNeuProduktTfld" layoutX="21.0" layoutY="79.0" prefHeight="25.0" prefWidth="124.0" />
                         <ImageView fitHeight="115.0" fitWidth="181.0" layoutX="28.0" layoutY="165.0">
                            <image>
                               <Image url="@drawable/neu_produkt.jpg" />
                            </image>
                         </ImageView>
+                        <Button id="IdNeuProduktZrckBtn" fx:id="fxNeuProduktZrckBtn" layoutX="362.0" layoutY="223.0" mnemonicParsing="false" text="zurück" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab closable="false" text="Profil">
+          <Tab id="IdProfilTab" fx:id="fxProfilTab" closable="false" text="Profil">
                <content>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="570.0">
                      <children>
-                        <Label layoutX="129.0" layoutY="51.0" text="Morgen" />
-                        <TextField layoutX="200.0" layoutY="47.0" prefHeight="25.0" prefWidth="51.0" />
-                        <TextField layoutX="200.0" layoutY="96.0" prefHeight="25.0" prefWidth="51.0" />
-                        <TextField layoutX="200.0" layoutY="139.0" prefHeight="25.0" prefWidth="51.0" />
-                        <TextField layoutX="200.0" layoutY="188.0" prefHeight="25.0" prefWidth="51.0" />
-                        <Label layoutX="133.0" layoutY="100.0" text="Abend" />
-                        <Label layoutX="129.0" layoutY="143.0" text="Gewicht" />
-                        <Label layoutX="78.0" layoutY="192.0" text="Persönlicher Faktor" />
-                        <Button layoutX="192.0" layoutY="246.0" mnemonicParsing="false" text="speichern" />
-                        <Button fx:id="btnZurückProdukt" layoutX="348.0" layoutY="246.0" mnemonicParsing="false" onAction="#onClickZuruck" text="zurück" />
+                        <Label id="IdPrflMrgnLbl" fx:id="fxPrflMrgnLbl" layoutX="129.0" layoutY="51.0" text="Morgen" />
+                        <TextField id="IdPrflMrgnTfld" fx:id="fxPrflMrgnTfld" layoutX="200.0" layoutY="47.0" prefHeight="25.0" prefWidth="51.0" />
+                        <TextField id="IdPrflAbndTfld" fx:id="fxPrflAbndTfld" layoutX="200.0" layoutY="96.0" prefHeight="25.0" prefWidth="51.0" />
+                        <TextField id="IdPrflGwchtTfld" fx:id="fxPrflGwchtTfld" layoutX="200.0" layoutY="139.0" prefHeight="25.0" prefWidth="51.0" />
+                        <TextField id="IdPrflPersFkTfld" fx:id="fxPrflPersFkTfld" layoutX="200.0" layoutY="188.0" prefHeight="25.0" prefWidth="51.0" />
+                        <Label id="IdPrflAbndLbl" fx:id="fxPrflAbndLbl" layoutX="133.0" layoutY="100.0" text="Abend" />
+                        <Label id="IdPrflGwchtLbl" fx:id="fxPrflGwchtLbl" layoutX="129.0" layoutY="143.0" text="Gewicht" />
+                        <Label id="IdPrflPersFktLbl" fx:id="fxPrflPersFktLbl" layoutX="78.0" layoutY="192.0" text="Persönlicher Faktor" />
+                        <Button id="IdPrflSpchrnBtn" fx:id="fxPrflSpchrnBtn" layoutX="192.0" layoutY="246.0" mnemonicParsing="false" text="speichern" />
+                        <Button id="IdPrflZrckBtn" fx:id="fxPrflZrckBtn" layoutX="348.0" layoutY="246.0" mnemonicParsing="false" onAction="#onClickZuruck" text="zurück" />
                      </children>
                   </AnchorPane>
                </content>
