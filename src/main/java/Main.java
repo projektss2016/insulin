@@ -1,5 +1,5 @@
 //import DB.conn;
-import DB.MySqlQueries;
+import DB.MySqlQueries17;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -74,16 +74,21 @@ public class Main extends Application {
         launch(args);
     }
 
-//    DatBase myDB = new DatBase();
 
     @Override
     public void start(Stage primaryStage) throws IOException, SQLException, ClassNotFoundException {
-        //TODO: check language sys parametr
-        MySqlQueries mySqlQueries = new MySqlQueries();
 
-//        mySqlQueries.CreateDB();
-//        mySqlQueries.WriteDB();
-        mySqlQueries.ReadDB();
+        MySqlQueries17 mySqlQueries = new MySqlQueries17();
+
+//        mySqlQueries.CreateDB_Product();
+//        mySqlQueries.WriteDB_Produkt();
+       mySqlQueries.ReadDB_Produkt();
+
+//      mySqlQueries.CreateDB_Profil();
+// mySqlQueries.WriteDB_Profil();
+        mySqlQueries.ReadDB_Profil();
+        //mySqlQueries.CloseDB();
+
 
         ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.bundle", new Locale("de"));
         Parent root = FXMLLoader.load(getClass().getResource("/w_start_14.fxml"), resourceBundle);

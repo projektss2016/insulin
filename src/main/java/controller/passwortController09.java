@@ -30,7 +30,7 @@ public class passwortController09 {
 public void onClickPasswort(ActionEvent event) throws IOException {
     Stage stage = null;
     Parent root = null;
-    final Passwort pass = new Passwort("insulin");
+    final Passwort pass = new Passwort("2309");
 //TODO
     if (event.getSource() == fxPsswdBtn & pass.getKod().equals(flPasswort.getText())) {
 //    if (event.getSource() == btnPasswort ){
