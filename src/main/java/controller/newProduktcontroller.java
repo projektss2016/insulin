@@ -60,6 +60,7 @@ public class newProduktcontroller {
         t.setKohlenhydrate(fxNeuProduktKhlnHydrTfld.getText());
         data.add(t);
         fxNeuProduktTbl.setItems(data);
+        HilfsFunktionen.speichereEinNeuesProdukt(t);
 
     }
 

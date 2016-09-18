@@ -3,15 +3,14 @@ package controller;
  * Created by nata on 13.09.2016.
  */
         import data.Passwort;
-                import javafx.event.ActionEvent;
+        import data.TVberechnung;
+        import javafx.collections.ObservableList;
+        import javafx.event.ActionEvent;
                 import javafx.fxml.FXML;
                 import javafx.fxml.FXMLLoader;
                 import javafx.scene.Parent;
                 import javafx.scene.Scene;
-                import javafx.scene.control.Button;
-                import javafx.scene.control.Label;
-                import javafx.scene.control.PasswordField;
-        import javafx.scene.control.Tab;
+        import javafx.scene.control.*;
         import javafx.stage.Stage;
 
                 import java.io.IOException;
@@ -28,6 +27,12 @@ public class berechnungController {
     Button btnZuruckAdminAktion;
 @FXML
     Tab tabAdmin;
+    @FXML
+    TableView fxBerTbl;
+    @FXML
+    TextField fxBerMngTfld,fxBerPersFaktTfld,fxBerErgbnsTfld;
+    @FXML
+    ComboBox fxBerProduktCb;
 
     ////TODO
 
@@ -60,4 +65,24 @@ public class berechnungController {
 //
 //
 //    }
+    public void   onClickBerBerechnen(ActionEvent event) throws IOException {
+        double perFak;
+        double erg;
+        ObservableList<TVberechnung> data;
+        data =  fxBerTbl.getItems();
+        perFak = Double.parseDouble(fxBerPersFaktTfld.getText());
+        erg=HilfsFunktionen.macheBerechnung(data,perFak);
+        fxBerErgbnsTfld.setText(String.valueOf(erg));
+    }
+
+
+    public void   onClickBerHinzfgn(ActionEvent event) throws IOException {
+        ObservableList<TVberechnung> data;
+        data =  fxBerTbl.getItems();
+        TVberechnung t = new TVberechnung();
+        t.setBerMenge(fxBerMngTfld.getText());
+        t.setBerProduktname((String)fxBerProduktCb.getValue()); //.getText());
+        data.add(t);
+        fxBerTbl.setItems(data);
+    }
 }

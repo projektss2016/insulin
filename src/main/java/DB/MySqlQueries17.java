@@ -7,7 +7,9 @@ package DB;
         import java.sql.ResultSet;
         import java.sql.SQLException;
         import java.sql.Statement;
-import data.User;
+
+        import data.TVneuesProdukt;
+        import data.User;
 
 
 public class MySqlQueries17 {
@@ -115,8 +117,8 @@ public class MySqlQueries17 {
         while (resSet1.next()) {
             //String Passw = resSet1.getString("Passwort");
             PersF = resSet1.getDouble("PersonFaktor");
-            AbenD = resSet1.getDouble("MorgenDose");
-            MorgD = resSet1.getDouble("AbendDose");
+            MorgD = resSet1.getDouble("MorgenDose");
+            AbenD = resSet1.getDouble("AbendDose");
             Gewicht = resSet1.getDouble("Gewicht");
 
 
@@ -164,6 +166,26 @@ public class MySqlQueries17 {
         return resSet;
 
     }
+
+    public static void setProdukt(TVneuesProdukt t, String lang) throws ClassNotFoundException, SQLException {
+        try {
+            statmt = conn.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if (lang.toUpperCase().equals("DE")) {
+            statmt.execute("INSERT INTO  InsulinProduktTab ('ProduktNameDE','ProduktNameRU', 'ProduktFaktor') " +
+                    " VALUES ('"+t.getProduktname()+"','', "+t.getKohlenhydrate()+"); ");
+        } else if (lang.toUpperCase().equals("RU")) {
+            statmt.execute("INSERT INTO  InsulinProduktTab ('ProduktNameDE','ProduktNameRU', 'ProduktFaktor') " +
+                    " VALUES ('',"+t.getProduktname()+"', "+t.getKohlenhydrate()+"); ");
+        } else {
+            statmt.executeQuery("SELECT * FROM InsulinProduktTab;");
+        }
+
+
+    }
+
 //    }
 
 

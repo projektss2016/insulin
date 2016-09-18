@@ -95,6 +95,7 @@ public class HilfsFunktionen {
         } else if ( meineFxml.equals("Berechnung")) {
             ((Label)root.lookup("#IdBerProduktLbl")).setText(rbSprache.getString("IdBerProduktLbl"));
             ((Label)root.lookup("#IdBerMngLbl")).setText(rbSprache.getString("IdBerMngLbl"));
+            ((Label)root.lookup("#IdBerErgbnsLbl")).setText(rbSprache.getString("IdBerErgbnsLbl"));
             ((Button)root.lookup("#IdBerHnzfgBtn")).setText(rbSprache.getString("IdBerHnzfgBtn"));
             ((Button)root.lookup("#IdBerBrchnBtn")).setText(rbSprache.getString("IdBerBrchnBtn"));
             ((Button)root.lookup("#IdBtnZuruckAdminAktion")).setText(rbSprache.getString("IdBtnZuruckAdminAktion"));
@@ -192,7 +193,6 @@ public class HilfsFunktionen {
                 TVneuesProdukt t = new TVneuesProdukt();
                 if (mlang.toUpperCase().equals("DE")) {
                     str=res.getString("ProduktNameDE");
-                    t.setProduktname(res.getString("ProduktNameDE"));
                 } else {
                     str=res.getString("ProduktNameRU");
                 }
@@ -208,7 +208,9 @@ public class HilfsFunktionen {
 
             }
 
+            tableview.setEditable(true);
             tableview.setItems(data);
+
 
 
 
@@ -220,10 +222,77 @@ public class HilfsFunktionen {
 
 
     }
+    public static void speichereEinNeuesProdukt(TVneuesProdukt t) {
+
+        try {
+            MySqlQueries17.setProdukt(t,mlang);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public static double macheBerechnung(ObservableList<TVberechnung> data,double perFak) {
+        ResultSet res;
+        double erg=0.;
+        String str;
+        double kohlenHydr,menge;
+        try {
+           res=MySqlQueries17.getProdukt("ALL");
+
+            while(res.next()){
+                if (mlang.toUpperCase().equals("DE")) {
+                    str=res.getString("ProduktNameDE");
+                } else {
+                 str=res.getString("ProduktNameRU");
+                }
+                if (str == null)
+                    continue;
+                if (str.equals(""))
+                    continue;
+                for(TVberechnung a : data){
+                    if(a.getBerProduktname().equals(str)) {
+                        str=res.getString("ProduktFaktor");
+                        kohlenHydr=Double.parseDouble(str);
+                        menge=Double.parseDouble(a.getBerMenge());
+                        erg += menge/100.*perFak*kohlenHydr;
+                        break;
+                    }
+                }
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return erg;
+
+    }
     public static void ladeBerechnung(Parent root) {
         User u = null;
+        ResultSet res;
+        ComboBox b =(ComboBox)root.lookup("#IdBerProduktCb");
+        ObservableList<String> data;
+        data = FXCollections.observableArrayList();
+        String str;
         try {
             u = MySqlQueries17.getUser_ProfilTab();
+            res=MySqlQueries17.getProdukt("ALL");
+
+            while(res.next()){
+                if (mlang.toUpperCase().equals("DE")) {
+                    str=res.getString("ProduktNameDE");
+                } else {
+                    str=res.getString("ProduktNameRU");
+                }
+                if (str == null)
+                    continue;
+                if (str.equals(""))
+                    continue;
+                data.add(str);
+            }
+            b.setItems(data);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -231,6 +300,6 @@ public class HilfsFunktionen {
         }
         ((TextField)root.lookup("#IdBerPersFaktTfld")).setText(String.valueOf(u.getPersonFaktor()));
 
-    }
+	}
 
 }
