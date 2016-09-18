@@ -31,7 +31,8 @@ public class MySqlQueries17 {
 //    // --------DB create--------
     public void CreateDB_Product() throws ClassNotFoundException, SQLException {
         statmt = conn.createStatement();
-        statmt.execute("CREATE TABLE if not exists InsulinProduktTab ('ProduktName' VARCHAR  PRIMARY KEY, " +
+        statmt.execute("CREATE TABLE if not exists InsulinProduktTab ('ProduktNameDE' VARCHAR , " +
+                "'ProduktNameRU' VARCHAR , " +
                 "'ProduktFaktor' REAL );");
 
     }
@@ -47,9 +48,9 @@ public class MySqlQueries17 {
 //    // --------Insert -------- Andere Werte input man in SQLiteadmin
     public static void WriteDB_Produkt() throws SQLException {
         statmt = conn.createStatement();
-        statmt.execute("INSERT INTO InsulinProduktTab ('ProduktName', 'ProduktFaktor') VALUES ('Brot', 1.453); ");
-        statmt.execute("INSERT INTO InsulinProduktTab ('ProduktName', 'ProduktFaktor') VALUES ('Butter', 3.789); ");
-        statmt.execute("INSERT INTO InsulinProduktTab ('ProduktName', 'ProduktFaktor') VALUES ('Apfel', 0.6123); ");
+        statmt.execute("INSERT INTO InsulinProduktTab ('ProduktNameDE','ProduktNameRU', 'ProduktFaktor') VALUES ('Brot','хлеб', 1.453); ");
+        statmt.execute("INSERT INTO InsulinProduktTab ('ProduktNameDE','ProduktNameRU', 'ProduktFaktor') VALUES ('Butter','сливочное масло', 3.789); ");
+        statmt.execute("INSERT INTO InsulinProduktTab ('ProduktNameDE','ProduktNameRU', 'ProduktFaktor') VALUES ('Apfel','яблоко', 0.6123); ");
     }
 
     //    // --------Insert --------
@@ -68,7 +69,7 @@ public class MySqlQueries17 {
         resSet = statmt.executeQuery("SELECT * FROM InsulinProduktTab;");
         System.out.println( " TEST TABELE InsulinProduktTab " );
         while (resSet.next()) {
-            String ProduktName = resSet.getString("ProduktName");
+            String ProduktName = resSet.getString("ProduktNameRU");
             double ProduktFaktor = resSet.getDouble("ProduktFaktor");
 
             System.out.println(ProduktName +" ======== "+ ProduktFaktor);
@@ -144,6 +145,23 @@ public class MySqlQueries17 {
         statmt1.execute("INSERT INTO User_ProfilTab ('Passwort', 'PersonFaktor','MorgenDose','AbendDose','Gewicht' )" +
                 " VALUES ('"+passwort+"', "+u.getPersonFaktor()+ "," +
                 u.getMorgendose()+ "," + u.getAbendDose()+ ","+ u.getGewicht()+"); ");
+
+    }
+
+    public static ResultSet getProdukt(String lang) throws ClassNotFoundException, SQLException {
+        try {
+            statmt = conn.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if (lang.toUpperCase().equals("DE")) {
+            resSet = statmt.executeQuery("SELECT ProduktNameDE,ProduktFaktor FROM InsulinProduktTab;");
+        } else if (lang.toUpperCase().equals("RU")) {
+            resSet = statmt.executeQuery("SELECT ProduktNameRU,ProduktFaktor FROM InsulinProduktTab;");
+        } else {
+            resSet = statmt.executeQuery("SELECT * FROM InsulinProduktTab;");
+        }
+        return resSet;
 
     }
 //    }

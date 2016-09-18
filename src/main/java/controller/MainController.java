@@ -48,7 +48,7 @@ public class MainController implements Initializable {
               sprache = "de";
             locSprache = new Locale("de","DE");
             rbSprache = ResourceBundle.getBundle("bundles.bundle",locSprache); //bundles ist das Verzeichnis
-            HilfsFunktionen.setRbSprache(rbSprache);                                                                   //bundle ist der Dateiname
+            HilfsFunktionen.setRbSprache(rbSprache,sprache);                                                                   //bundle ist der Dateiname
                                                                                //bundle_de.properties -> nur bundle wird
                                                                                //genommen, der "_" wird automatisch gemacht
 
@@ -61,7 +61,7 @@ public class MainController implements Initializable {
 
             locSprache = new Locale("ru","RU");
             rbSprache = ResourceBundle.getBundle("bundles.bundle",locSprache); //bundles ist das Verzeichnis
-            HilfsFunktionen.setRbSprache(rbSprache);
+            HilfsFunktionen.setRbSprache(rbSprache,sprache);
             //bundle ist der Dateiname
             //bundle_de.properties -> nur bundle wird
             //genommen, der "_" wird automatisch gemacht

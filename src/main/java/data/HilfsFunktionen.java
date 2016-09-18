@@ -1,11 +1,13 @@
 package data;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 
 import java.awt.*;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import DB.*;
@@ -18,8 +20,10 @@ import javafx.scene.control.TextField;
  */
 public class HilfsFunktionen {
     static ResourceBundle rbSprache;
-    public static void setRbSprache(ResourceBundle rb) {
+    static String mlang;
+    public static void setRbSprache(ResourceBundle rb, String spr) {
         rbSprache = rb;
+        mlang = spr;
     }
     public static ResourceBundle getRbSprache(ResourceBundle rb) {
         return rbSprache;
@@ -159,6 +163,61 @@ public class HilfsFunktionen {
         ((TextField)root.lookup("#IdPrflAbndTfld")).setText(String.valueOf(u.getAbendDose()));
         ((TextField)root.lookup("#IdPrflGwchtTfld")).setText(String.valueOf(u.getGewicht()));
         ((TextField)root.lookup("#IdPrflPersFkTfld")).setText(String.valueOf(u.getPersonFaktor()));
+
+    }
+    public static void ladeNeuProdukt(Parent root) {
+        ResultSet res = null;
+        //ObservableList<ObservableList> data;
+        ObservableList<TVneuesProdukt> data;
+        String str;
+        try {
+            res=MySqlQueries17.getProdukt("ALL");
+            data = FXCollections.observableArrayList();
+            TableView tableview = (TableView) root.lookup("#IdNeuProduktTbl");
+
+            /********************************
+             * Data added to ObservableList *
+             ********************************/
+            while(res.next()){
+                //Iterate Row
+
+                /*ObservableList<String> row = FXCollections.observableArrayList();
+                for(int i=1 ; i<=res.getMetaData().getColumnCount(); i++){
+                    //Iterate Column
+                    //row.add(res.getString(i));
+                    TVneuesProdukt t = new TVneuesProdukt();
+
+                }*/
+
+                TVneuesProdukt t = new TVneuesProdukt();
+                if (mlang.toUpperCase().equals("DE")) {
+                    str=res.getString("ProduktNameDE");
+                    t.setProduktname(res.getString("ProduktNameDE"));
+                } else {
+                    str=res.getString("ProduktNameRU");
+                }
+                if (str == null)
+                    continue;
+                if (str.equals(""))
+                    continue;
+                t.setProduktname(str);
+                t.setKohlenhydrate(res.getString("ProduktFaktor"));
+
+                //System.out.println("Row [1] added "+row );
+                data.add(t);
+
+            }
+
+            tableview.setItems(data);
+
+
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
 
     }
     public static void ladeBerechnung(Parent root) {

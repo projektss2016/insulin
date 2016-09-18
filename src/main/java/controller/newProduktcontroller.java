@@ -4,15 +4,15 @@ package controller;
  * Created by nata on 13.09.2016.
  */
         import data.Passwort;
+        import data.TVneuesProdukt;
+        import javafx.collections.FXCollections;
+        import javafx.collections.ObservableList;
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
         import javafx.fxml.FXMLLoader;
         import javafx.scene.Parent;
         import javafx.scene.Scene;
-        import javafx.scene.control.Button;
-        import javafx.scene.control.Label;
-        import javafx.scene.control.PasswordField;
-        import javafx.scene.control.TextField;
+        import javafx.scene.control.*;
         import javafx.stage.Stage;
 
         import java.io.IOException;
@@ -31,10 +31,14 @@ public class newProduktcontroller {
     Button fxNeuProduktSpchrnBtn;
     @FXML
     TextField fxPrflMrgnTfld,fxPrflAbndTfld,fxPrflGwchtTfld,fxPrflPersFkTfld;
-
+    @FXML
+    TextField fxNeuProduktTfld,fxNeuProduktKhlnHydrTfld;
+    @FXML
+    TableView fxNeuProduktTbl;
     ////TODO
 
     public void onClickProduktSpeichen(ActionEvent event) throws IOException {
+        /*
         Stage stage = null;
         Parent root = null;
 
@@ -48,7 +52,14 @@ public class newProduktcontroller {
         stage.setScene(new Scene(root, 600, 400));
         stage.setTitle("Insulin APP");
         stage.show();
-
+        */
+        ObservableList<TVneuesProdukt> data;
+        data =  fxNeuProduktTbl.getItems();
+        TVneuesProdukt t = new TVneuesProdukt();
+        t.setProduktname(fxNeuProduktTfld.getText());
+        t.setKohlenhydrate(fxNeuProduktKhlnHydrTfld.getText());
+        data.add(t);
+        fxNeuProduktTbl.setItems(data);
 
     }
 
@@ -77,6 +88,7 @@ public class newProduktcontroller {
         gewicht = fxPrflGwchtTfld.getText();
         perFak = fxPrflPersFkTfld.getText();
         HilfsFunktionen.speichereProfil(mDos, aDos, gewicht, perFak);
+
         stage = (Stage) fxNeuProduktSpchrnBtn.getScene().getWindow();
 
         //load up OTHER FXML document
