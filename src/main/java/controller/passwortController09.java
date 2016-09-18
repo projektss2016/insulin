@@ -38,6 +38,7 @@ public void onClickPasswort(ActionEvent event) throws IOException {
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getClassLoader().getResource("Profil_Produkt.fxml"));
         HilfsFunktionen.setzeSprache("NeuesProdukt",root);
+        HilfsFunktionen.ladeProfil(root);
         stage.setScene(new Scene(root, 600, 400));
         stage.setTitle("Insulin APP");
         stage.show();

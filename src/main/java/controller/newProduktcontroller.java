@@ -12,6 +12,7 @@ package controller;
         import javafx.scene.control.Button;
         import javafx.scene.control.Label;
         import javafx.scene.control.PasswordField;
+        import javafx.scene.control.TextField;
         import javafx.stage.Stage;
 
         import java.io.IOException;
@@ -28,13 +29,17 @@ public class newProduktcontroller {
     Button fxNeuProduktZrckBtn;
     @FXML
     Button fxNeuProduktSpchrnBtn;
+    @FXML
+    TextField fxPrflMrgnTfld,fxPrflAbndTfld,fxPrflGwchtTfld,fxPrflPersFkTfld;
 
     ////TODO
 
     public void onClickProduktSpeichen(ActionEvent event) throws IOException {
         Stage stage = null;
         Parent root = null;
-        stage = (Stage) fxNeuProduktSpchrnBtn.getScene().getWindow();
+
+
+
         //load up OTHER FXML document
         root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
         HilfsFunktionen.setzeSprache("Admin",root);
@@ -61,5 +66,26 @@ public class newProduktcontroller {
         stage.show();
 
 
+    }
+    public void onClickProfilSpeichern(ActionEvent event) throws IOException {
+        Stage stage = null;
+        Parent root = null;
+
+        String mDos, aDos, gewicht, perFak;
+        mDos = fxPrflMrgnTfld.getText();
+        aDos = fxPrflAbndTfld.getText();
+        gewicht = fxPrflGwchtTfld.getText();
+        perFak = fxPrflPersFkTfld.getText();
+        HilfsFunktionen.speichereProfil(mDos, aDos, gewicht, perFak);
+        stage = (Stage) fxNeuProduktSpchrnBtn.getScene().getWindow();
+
+        //load up OTHER FXML document
+        root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Admin0909.fxml"));
+        HilfsFunktionen.setzeSprache("Admin", root);
+        //((Label) root.lookup("#IdRoleWahlen")).setText(rbSprache.getString("IdRoleWahlen"));
+        //create a new scene with root and set the stage
+        stage.setScene(new Scene(root, 600, 400));
+        stage.setTitle("Insulin APP");
+        stage.show();
     }
 }

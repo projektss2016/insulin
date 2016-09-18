@@ -5,7 +5,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 
+import java.awt.*;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import DB.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  * Created by flora on 17.09.2016.
@@ -122,4 +128,50 @@ public class HilfsFunktionen {
         }
 
     }
+    public static void speichereProfil(String strMdos, String strAdos,String strGewicht, String strPerFak) {
+        double mDos=Double.parseDouble(strMdos);
+        double aDos=Double.parseDouble(strAdos);
+        double gewicht=Double.parseDouble(strGewicht);
+        double perf=Double.parseDouble(strPerFak);
+        //(String name, double personFaktor,double morgenDose,double abendDose,double gewicht)
+
+        try {
+            MySqlQueries17.setUser_ProfilTab(new User("",perf,mDos,aDos,gewicht));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static void ladeProfil(Parent root) {
+        User u = null;
+        try {
+            u = MySqlQueries17.getUser_ProfilTab();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        //IdPrflMrgnTfld
+        ((TextField)root.lookup("#IdPrflMrgnTfld")).setText(String.valueOf(u.getMorgendose()));
+        ((TextField)root.lookup("#IdPrflAbndTfld")).setText(String.valueOf(u.getAbendDose()));
+        ((TextField)root.lookup("#IdPrflGwchtTfld")).setText(String.valueOf(u.getGewicht()));
+        ((TextField)root.lookup("#IdPrflPersFkTfld")).setText(String.valueOf(u.getPersonFaktor()));
+
+    }
+    public static void ladeBerechnung(Parent root) {
+        User u = null;
+        try {
+            u = MySqlQueries17.getUser_ProfilTab();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        ((TextField)root.lookup("#IdBerPersFaktTfld")).setText(String.valueOf(u.getPersonFaktor()));
+
+    }
+
 }

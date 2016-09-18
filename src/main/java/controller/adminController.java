@@ -49,6 +49,7 @@ public class adminController {
             root = FXMLLoader.load(getClass().getClassLoader().getResource("w_Berechnung.fxml"));
             //hier buttons und labels setzen von w_Berechnen.fxml
             HilfsFunktionen.setzeSprache("Berechnung",root);
+            HilfsFunktionen.ladeBerechnung(root);
             stage.setScene(new Scene(root));
         }}
 

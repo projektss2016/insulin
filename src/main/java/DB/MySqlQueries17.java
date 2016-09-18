@@ -7,6 +7,7 @@ package DB;
         import java.sql.ResultSet;
         import java.sql.SQLException;
         import java.sql.Statement;
+import data.User;
 
 
 public class MySqlQueries17 {
@@ -16,6 +17,8 @@ public class MySqlQueries17 {
 
     public static Statement statmt1;
     public static ResultSet resSet1;
+
+    private static String passwort = "2309";
 
     public MySqlQueries17(){
         conn = MyConnection17.getInstance();
@@ -53,7 +56,7 @@ public class MySqlQueries17 {
     public static void WriteDB_Profil() throws SQLException {
         statmt1 = conn.createStatement();
         statmt1.execute("INSERT INTO User_ProfilTab ('Passwort', 'PersonFaktor','MorgenDose','AbendDose','Gewicht' )" +
-                " VALUES ('insulin', 1.0,0,0,0); ");
+                " VALUES ('"+passwort+"', 1.0,0,0,0); ");
     }
     // -------- output--------
     public void ReadDB_Produkt() throws ClassNotFoundException, SQLException {
@@ -90,6 +93,57 @@ public class MySqlQueries17 {
             System.out.println(Passw + " ======== " + PersF);
 
         }
+
+    }
+
+    public static User getUser_ProfilTab() throws ClassNotFoundException, SQLException {
+        double PersF=0.;
+        double AbenD=0.;
+        double MorgD=0.;
+        double Gewicht=0.;
+
+
+        try {
+            statmt1 = conn.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+        resSet1 = statmt1.executeQuery("SELECT * FROM User_ProfilTab;");
+        System.out.println( " TEST TABELE User_ProfilTab " );
+        while (resSet1.next()) {
+            //String Passw = resSet1.getString("Passwort");
+            PersF = resSet1.getDouble("PersonFaktor");
+            AbenD = resSet1.getDouble("MorgenDose");
+            MorgD = resSet1.getDouble("AbendDose");
+            Gewicht = resSet1.getDouble("Gewicht");
+
+
+            //System.out.println(Passw + " ======== " + PersF);
+            break;
+
+        }
+        //(String name, double personFaktor,double morgenDose,double abendDose,double gewicht)
+        return new User("",PersF,MorgD,AbenD,Gewicht);
+
+    }
+
+    public static void setUser_ProfilTab(User u) throws ClassNotFoundException, SQLException {
+        double PersF=0.;
+        double AbenD=0.;
+        double MorgD=0.;
+        double Gewicht=0.;
+
+
+        try {
+            statmt1 = conn.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        statmt1.execute("DELETE FROM User_ProfilTab;");
+        statmt1.execute("INSERT INTO User_ProfilTab ('Passwort', 'PersonFaktor','MorgenDose','AbendDose','Gewicht' )" +
+                " VALUES ('"+passwort+"', "+u.getPersonFaktor()+ "," +
+                u.getMorgendose()+ "," + u.getAbendDose()+ ","+ u.getGewicht()+"); ");
 
     }
 //    }

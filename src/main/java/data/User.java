@@ -6,16 +6,18 @@ package data;
 public class User {
 
     private String name;
-    private int personFaktor;
-    private int morgenDose;
-    private int abendDose;
+    private double personFaktor;
+    private double morgenDose;
+    private double abendDose;
+    private double gewicht;
 
 
-    public User(String name, int personFaktor,int morgenDose,int abendDose) {
+    public User(String name, double personFaktor,double morgenDose,double abendDose,double gewicht) {
         this.name = name;
         this.personFaktor = personFaktor;
         this.morgenDose = morgenDose;
         this.abendDose = abendDose;
+        this.gewicht = gewicht;
     }
 
     public String getName() {
@@ -26,26 +28,30 @@ public class User {
     }
 
 
-    public int getPersonFaktor() {
+    public double getPersonFaktor() {
         return personFaktor;
     }
-    public void setPersonFaktor(int personFaktor) {
+    public void setPersonFaktor(double personFaktor) {
         this.personFaktor = personFaktor;
     }
 
 
-    public int getMorgendose() {
+    public double getMorgendose() {
         return morgenDose;
     }
-    public void setMorgenDose(int morgenDose) {
+    public void setMorgenDose(double morgenDose) {
         this.morgenDose = morgenDose;
     }
 
-    public int getAbendDose() {
+    public double getAbendDose() {
         return abendDose;
     }
-    public void setAbendDose(int abendDose) {
+    public void setAbendDose(double abendDose) {  this.abendDose = abendDose;  }
 
+    public double getGewicht() {
+        return gewicht;
     }
-
+    public void setGewicht(double gewicht) {  this.gewicht = gewicht;  }
 }
+
+
