@@ -80,12 +80,12 @@ public class Main extends Application {
 
         MySqlQueries17 mySqlQueries = new MySqlQueries17();
 
-//        mySqlQueries.CreateDB_Product();
-//        mySqlQueries.WriteDB_Produkt();
+  //      mySqlQueries.CreateDB_Product();
+  //      mySqlQueries.WriteDB_Produkt();
        mySqlQueries.ReadDB_Produkt();
 
-//      mySqlQueries.CreateDB_Profil();
-// mySqlQueries.WriteDB_Profil();
+     //   mySqlQueries.CreateDB_Profil();
+        //mySqlQueries.WriteDB_Profil();
         mySqlQueries.ReadDB_Profil();
         //mySqlQueries.CloseDB();
 
