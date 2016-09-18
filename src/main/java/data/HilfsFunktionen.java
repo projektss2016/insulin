@@ -89,6 +89,10 @@ public class HilfsFunktionen {
             ((Button)root.lookup("#IdBerBrchnBtn")).setText(rbSprache.getString("IdBerBrchnBtn"));
             ((Button)root.lookup("#IdBtnZuruckAdminAktion")).setText(rbSprache.getString("IdBtnZuruckAdminAktion"));
 
+            if (root.lookup("#IdBerProduktCb")!=null){
+                ComboBox b =(ComboBox)root.lookup("#IdBerProduktCb");
+                b.setPromptText(rbSprache.getString("IdBerProduktCb"));
+            }
             ((TextField)root.lookup("#IdBerMngTfld")).setText(rbSprache.getString("IdBerMngTfld"));
 
             //Tab umbenennen
