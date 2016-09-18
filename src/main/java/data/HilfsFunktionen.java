@@ -93,7 +93,7 @@ public class HilfsFunktionen {
                 ComboBox b =(ComboBox)root.lookup("#IdBerProduktCb");
                 b.setPromptText(rbSprache.getString("IdBerProduktCb"));
             }
-            ((TextField)root.lookup("#IdBerMngTfld")).setText(rbSprache.getString("IdBerMngTfld"));
+            ((TextField)root.lookup("#IdBerPersFaktTfld")).setText(rbSprache.getString("IdBerPersFaktTfld"));
 
             //Tab umbenennen
             if (root.lookup("#IdBerTbPn")!=null) {
