@@ -178,7 +178,7 @@ public class MySqlQueries17 {
                     " VALUES ('"+t.getProduktname()+"','', "+t.getKohlenhydrate()+"); ");
         } else if (lang.toUpperCase().equals("RU")) {
             statmt.execute("INSERT INTO  InsulinProduktTab ('ProduktNameDE','ProduktNameRU', 'ProduktFaktor') " +
-                    " VALUES ('',"+t.getProduktname()+"', "+t.getKohlenhydrate()+"); ");
+                    " VALUES ('','"+t.getProduktname()+"', "+t.getKohlenhydrate()+"); ");
         } else {
             statmt.executeQuery("SELECT * FROM InsulinProduktTab;");
         }

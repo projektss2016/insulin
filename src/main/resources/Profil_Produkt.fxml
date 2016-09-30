@@ -15,7 +15,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.newProduktcontroller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.newProduktcontroller">
    <children>
       <TabPane id="IdNeuProduktTbPn" fx:id="fxNeuProduktTbPn" layoutX="14.0" layoutY="41.0" prefHeight="332.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="41.0">
         <tabs>
@@ -53,7 +55,7 @@
                               <Image url="@drawable/neu_produkt.jpg" />
                            </image>
                         </ImageView>
-                        <Button id="IdNeuProduktZrckBtn" fx:id="fxNeuProduktZrckBtn" layoutX="362.0" layoutY="223.0" mnemonicParsing="false" onAction="#onClickZuruck" text="zurück" />
+                        <Button id="IdNeuProduktZrckBtn" fx:id="fxNeuProduktZrckBtn" layoutX="362.0" layoutY="223.0" mnemonicParsing="false" onAction="#onClickZuruck" text="zurï¿½ck" />
                      </children>
                   </AnchorPane>
             </content>
@@ -69,9 +71,9 @@
                         <TextField id="IdPrflPersFkTfld" fx:id="fxPrflPersFkTfld" layoutX="200.0" layoutY="188.0" prefHeight="25.0" prefWidth="51.0" />
                         <Label id="IdPrflAbndLbl" fx:id="fxPrflAbndLbl" layoutX="133.0" layoutY="100.0" text="Abend" />
                         <Label id="IdPrflGwchtLbl" fx:id="fxPrflGwchtLbl" layoutX="129.0" layoutY="143.0" text="Gewicht" />
-                        <Label id="IdPrflPersFktLbl" fx:id="fxPrflPersFktLbl" layoutX="78.0" layoutY="192.0" text="Persönlicher Faktor" />
+                        <Label id="IdPrflPersFktLbl" fx:id="fxPrflPersFktLbl" layoutX="78.0" layoutY="192.0" text="Persï¿½nlicher Faktor" />
                         <Button id="IdPrflSpchrnBtn" fx:id="fxPrflSpchrnBtn" layoutX="192.0" layoutY="246.0" mnemonicParsing="false" onAction="#onClickProfilSpeichern" text="speichern" />
-                        <Button id="IdPrflZrckBtn" fx:id="fxPrflZrckBtn" layoutX="348.0" layoutY="246.0" mnemonicParsing="false" onAction="#onClickZuruck" text="zurück" />
+                        <Button id="IdPrflZrckBtn" fx:id="fxPrflZrckBtn" layoutX="348.0" layoutY="246.0" mnemonicParsing="false" onAction="#onClickZuruck" text="zurï¿½ck" />
                      </children>
                   </AnchorPane>
                </content>
